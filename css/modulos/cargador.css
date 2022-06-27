@@ -5,7 +5,7 @@
     height: 100vh;
     position: absolute;
     z-index: 2;
-    background-color: var(--color2);
+    background-color: var(--color_a);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,10 +44,6 @@
     0%{
         opacity: 1;
         transform: scale(1);
-    }
-    50%{
-        opacity: 0.5;
-        transform: scale(0.5);
     }
     100%{
         opacity: 0;

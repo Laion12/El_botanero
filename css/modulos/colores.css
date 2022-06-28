@@ -1,6 +1,6 @@
 :root{
     --color_h:hsla(56, 73%, 68%, 0.8);
     --color_a: hsl(41, 97%, 56%);
-    --color_g:hsl(0, 0%, 46%);
-    --color_c: rgba(214, 67, 30, 0.801);
+    --color_g:hsl(0, 0%, 33%);
+    --color_c: hsla(12, 75%, 48%, 0.801);
 }

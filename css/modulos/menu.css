@@ -4,10 +4,13 @@
     position: absolute;
     top: 0px;
     z-index: 2;
-    background-color: transparent;
+    background-color:#fff;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
+}
+.menu_mov{
+    background-color: #fff;
 }
 .menu_imagen{
     width: 26%;
@@ -31,9 +34,33 @@
     font-size: 1.2rem;
     font-weight: 400;
     font-family: Verdana, Geneva, Tahoma;
+    color: var(--color_g);
+    transition: transform .8s;
+}
+.menu_lista li a:hover{ 
+    color: var(--color_a);
+}
+.text_mov{
+    color: var(--color_g);
 }
 .capa{
     width: 100%;
     height: 100%;
     background-color: hsla(0, 0%, 0%, 0.400);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.capa_titulo{
+    color: #fff;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4.8rem;
+}
+.capa_subtitulo{
+    color: #fff;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4rem;
 }

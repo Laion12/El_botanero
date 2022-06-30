@@ -15,17 +15,107 @@
         <img src="assets/image/Botanero_recortado.svg" alt="El botanero logo" class="cargador_img">
         <span class="cargador_carga"></span>
     </div>
-    <div class="i_contenedor">
+    <div class="i_contenedor" id="i_contenedor">
         <header class="i_head">
+            <nav class="menu" id="menu">
+                <a href="views/login.html" class="menu_imagen"><img src="assets/image/Botanero_logo_2.svg" alt=""></a>
+                <ul class="menu_lista" id="menu_lista">
+                    <li><a href="#" class="menu_text">Inicio</a></li>
+                    <li><a href="views/catalogo.html" class="menu_text">Catálogo</a></li>
+                    <li><a href="views/nosotros.html" class="menu_text">Nosotros</a></li>
+                </ul>
+            </nav>
+            <div class="capa">
+                <h1 class="capa_titulo">El botanero</h1>
+                <h2 class="capa_subtitulo">El sabor por sobre todo</h2>
+            </div>
         </header>
         <main class="i_body">
-            <section></section>
-            <section></section>
-            <section></section>
-            <section>Contáctanos</section>
+            <section class="i_body_nosotros">
+                <div class="i_body_parallax"></div>
+                <div class="i_body_texto">
+                    <p class="i_body_titulo">¿Quiénes somos?</p>
+                    <p class="i_body_p">
+                        ¡Hola! bienvenidos a nuestro sitio oficial “El Botanero”. 
+                        Nuestro negocio está conformado por la familia Martínez 
+                        Carmona y somos originarios de "Cuatexmola, Ixtacamaxtitlan Puebla. 
+                        Nuestra historia comienza en julio del 2019 empezamos como un negocio 
+                        de verduras pero por cuestiones de la pandemia y otros problemas nos 
+                        vimos obligados a intentar un nuevo negocio, el cual, pensamos que sería 
+                        buena idea empezar a comercializar productos para botanear ya que existía 
+                        poca competencia en la zona. Todo esto fue desde cero, comenzamos haciendo 
+                        todo el trabajo manualmente, actualmente ya contamos con equipo que nos facilita 
+                        el trabajo y podemos producir más producto para cada persona que deguste una botanita. 
+                        Porque con esfuerzo y dedicación todo se puede lograr, así que ya nos conoces, no dudes en 
+                        visitarnos y de probar de nuestras especialidades.
+                    </p>
+                </div>
+            </section>
+            <section class="i_body_galeria">
+                <div class="galeria_contenedor">
+                    <img src="assets/image/fotos/bbq.png" alt="">
+                </div>
+                <div class="galeria_contenedor">
+                    <img src="assets/image/fotos/bbq.png" alt="">
+                </div>
+                <div class="galeria_contenedor">
+                    <img src="assets/image/fotos/bbq.png" alt="">
+                </div>
+                <div class="galeria_contenedor">
+                    <img src="assets/image/fotos/bbq.png" alt="">
+                </div>
+                <div class="galeria_contenedor">
+                    <img src="assets/image/fotos/bbq.png" alt="">
+                </div>
+                <div class="galeria_contenedor">
+                    <img src="assets/image/fotos/bbq.png" alt="">
+                </div>
+                <div class="galeria_contenedor">
+                    <img src="assets/image/fotos/bbq.png" alt="">
+                </div>
+                <div class="galeria_contenedor">
+                    <img src="assets/image/fotos/bbq.png" alt="">
+                </div>
+            </section>
+            <section class="i_body_contacto">
+                <div class="contenedor">
+                    <form action="" class="form">
+                        <div class="form-header">
+                            <h1 class="form-title">C<span>ontáctanos</span></h1>
+                        </div>
+            
+                        <label for="nombre" class="form-label">Nombre(s)</label>
+                        <input type="text" id="nombre" class="form-input" placeholder="Escriba su nombre" pattern="[A-Za-z]{3,254}">
+            
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <input type="text" id="apellidos" class="form-input" placeholder="Escriba sus apellidos" pattern="[A-Za-z]{2,254}">
+            
+                        <label for="correo" class="form-label">Correo electrónico</label>
+                        <input type="email" id="correo" class="form-input" placeholder="Escriba su correo" pattern="[A-Za-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}">
+            
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                       <textarea id="mensaje" class="form-textarea" placeholder="Escribe aquí tu mensaje" pattern="[A-Za-z0-9]"></textarea>
+            
+                       <input type="submit" class="btn-submit" value="Enviar consulta">
+                    </form>
+                </div>
+            </section>
         </main>
-        <footer class="i_feet">
-
+        <footer class="feet">
+            <span class="feet_d">
+                <img src="assets/image/Botanero_logo.svg" alt="">
+            </span>
+            <span class="feet_d">
+                <p>Horarios del local:</p>
+            </span>
+            <span class="feet_d">
+                <p>Encuentranos en:</p>
+                <p>Blvd. Yancuitlalpan Col, Nuevos Horizontes, Centro, 90500 Huamantla, Tlax.</p>
+            </span>
+            <span class="feet_d">
+                <p>Creado por:</p>
+                <p>Codelite</p>
+            </span>
         </footer>
     </div>
     <script src="js/main.js" type="module"></script>

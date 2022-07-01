@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 /*!
  * Materialize v1.0.0 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
-=======
-/*!
- * Materialize v1.0.0 (http://materializecss.com)
- * Copyright 2014-2017 Materialize
- * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
- */
->>>>>>> 087db7c423f5cd12f92704b1a9799764ee40083b
 .materialize-red {
   background-color: #e51c23 !important;
 }
@@ -4423,10 +4415,10 @@ nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.b
   height: inherit;
   line-height: inherit;
 }
-
-nav ul a:hover {
+/* Comentario para recordar que comente la accion del fondo transparente por defecto de a lion */
+/* nav ul a:hover {
   background-color: rgba(0, 0, 0, 0.1);
-}
+} */
 
 nav ul.left {
   float: left;
@@ -8574,10 +8566,19 @@ input[type=range]::-ms-thumb {
  visibility 0s 1s,
  -webkit-transform .3s;
 =======
-  -webkit-transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
-  transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
-  transition: opacity .3s, transform .3s, visibility 0s 1s;
-  transition: opacity .3s, transform .3s, visibility 0s 1s, -webkit-transform .3s;
+  -webkit-transition: opacity .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s 1s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
 >>>>>>> 087db7c423f5cd12f92704b1a9799764ee40083b
 }
 
@@ -8646,10 +8647,19 @@ input[type=range]::-ms-thumb {
  visibility 0s,
  -webkit-transform .3s;
 =======
-  -webkit-transition: opacity .3s, visibility 0s, -webkit-transform .3s;
-  transition: opacity .3s, visibility 0s, -webkit-transform .3s;
-  transition: opacity .3s, transform .3s, visibility 0s;
-  transition: opacity .3s, transform .3s, visibility 0s, -webkit-transform .3s;
+  -webkit-transition: opacity .3s,
+ visibility 0s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ visibility 0s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s,
+ -webkit-transform .3s;
 >>>>>>> 087db7c423f5cd12f92704b1a9799764ee40083b
   z-index: -1;
 }

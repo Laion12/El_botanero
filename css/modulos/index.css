@@ -15,13 +15,34 @@
 .i_head{
     width: 100%;
     height: 100vh;
-    border-radius: 2%;
-    background-image: url(../../assets/image/fotos/naturales.png);
+    border-radius: 0% 0% 2% 2%;
+    background-image: url(../../assets/image/fotos/diablito.webp);
     background-repeat: no-repeat;
     background-size: cover;
     transition: animation .2s linear;
     animation: fondo 20s infinite;
     margin-bottom: 10px;
+}
+.capa{
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.400);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.capa_titulo{
+    color: #fff;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4.8rem;
+}
+.capa_subtitulo{
+    color: #fff;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6rem;
 }
 .i_body{
     width: 100%;
@@ -43,7 +64,8 @@
     grid-column: 1/2;
     grid-row: 1/2;
     border-radius: 2%;
-    background-image: url(../../assets/image/fotos/fuego.png);
+    margin: 2%;
+    background-image: url(../../assets/image/fotos/fuego.webp);
     background-repeat: no-repeat;
     background-size:50% 100%;
     background-attachment: fixed;
@@ -65,6 +87,9 @@
     width: 80%;
     text-align: justify;
     font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 22px;
+    letter-spacing: .6px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .i_body_galleria{
@@ -90,32 +115,33 @@
     width: 100%;
     height: 100%;
     border-radius: 2%;
+    cursor: pointer;
 }
 .i_body_contacto{
     grid-column: 1/2;
     grid-row: 3/4;
-    background:url(../../assets/image/fotos/queso_con_jalapeño.png);
+    background:url(../../assets/image/fotos/jalapeño.webp);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 @keyframes fondo{
     0%{
-        background-image:  url(../../assets/image/fotos/naturales.png);
+        background-image:  url(../../assets/image/fotos/diablito.webp);
     }
     10%{
-        background-image: url(../../assets/image/fotos/Papas.jpeg);
+        background-image: url(../../assets/image/fotos/takis.webp);
     }
     35%{
-        background-image: url(../../assets/image/fotos/bbq.png);
+        background-image: url(../../assets/image/fotos/bbq.webp);
     }
     60%{
-        background-image: url(../../assets/image/fotos/queso_con_jalapeño.png);
+        background-image: url(../../assets/image/fotos/queso_con_jalapeño.webp);
     }
     85%{
-        background-image: url(../../assets/image/fotos/chipotle.png);
+        background-image: url(../../assets/image/fotos/chipotle.webp);
     }
     100%{
-        background-image:  url(../../assets/image/fotos/naturales.png);
+        background-image:  url(../../assets/image/fotos/diablito.webp);
     }
 }

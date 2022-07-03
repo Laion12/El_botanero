@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <form action="" class="form">
+            <div class="form-header">
+                <h1 class="form-title">R<span>egistro</span></h1>
+            </div>
+
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" class="form-input" placeholder="Escriba su nombre" pattern="[a-z Z-A]{3,254}" required>
+
+            <label for="apellidos" class="form-label">Apellido P</label>
+            <input type="text" id="apellidos" class="form-input" placeholder="Escriba su apellido" pattern="[a-z Z-A]{2,254}" required>
+
+            <label for="correo" class="form-label">Correo</label>
+            <input type="email" id="correo" class="form-input" placeholder="Escriba su correo" pattern="[A-Za-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}" required>
+
+            <label for="contraseña" class="form-label">Contraseña</label>
+           <input type="password" id="contraseña" class="form-textarea" placeholder="Escribe aquí tu contraseña" pattern="[a-z Z-A]" maxlength="12" minlength="8" title="Minímo 8 máximo 12 letras o números" required>
+
+           <input type="submit" class="btn-submit" value="Enviar datos">
+        </form>
+    </div>
+</body>
+</html>

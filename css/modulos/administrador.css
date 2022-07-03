@@ -46,26 +46,40 @@ body {
     position: relative;
     
 }
-
 .contenedor .form-input, .form-textarea {
-    background: rgba(236, 121, 121, 0.98);
+    background: rgba(0, 0, 0, .7);
     border: none;
     outline: none;
-    border-bottom: 2px solid rgb(249, 3, 3);
+    border-bottom: 2px solid rgb(251, 194, 4);
     width: 100%;
-    padding: 12px;
+    padding: 5px;
     margin-bottom: 20px;
     border-radius: 2px;
     font-size: 14px;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .contenedor .form .form-textarea {
     resize: vertical;
     max-height: 150px;
     min-height: 50px;
+
 }
+
+.contenedor .form .form-input {
+    background: rgba(0, 0, 0, .7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(251, 194, 4);
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 .contenedor .form .btn-submit {
     width: 100%;
@@ -74,7 +88,7 @@ body {
     background: rgb(251, 194, 4);
     font-size: 16px;
     border: none;
-    color: #fff;
+    color: rgb(11, 5, 6);
     padding: 15px 0;
     cursor: pointer;  
     transition: all .5s ease; 

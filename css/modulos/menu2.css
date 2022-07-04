@@ -1,0 +1,6 @@
+.menu2{
+    background-color: hsl(0, 0%, 100%);
+}
+.menu_lista2 li a{
+    color:var(--color_g);
+}

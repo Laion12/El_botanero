@@ -5,30 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Formulario de contacto</title>
+    <link rel="shortcut icon" href="../assets/image/Botanero_favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<link rel="stylesheet" href="login.css">
 <body>
-    <div class="contenedor">
-        <form action="" class="form">
-            <div class="form-header">
-                <h1 class="form-title">C<span>ontáctanos</span></h1>
-            </div>
-
-            <label for="nombre" class="form-label">Nombre(s)</label>
-            <input type="text" id="nombre" class="form-input" placeholder="Escriba su nombre" pattern="[A-Za-z]{3,254}">
-
-            <label for="apellidos" class="form-label">Apellidos</label>
-            <input type="text" id="apellidos" class="form-input" placeholder="Escriba sus apellidos" pattern="[A-Za-z]{2,254}">
-
-            <label for="correo" class="form-label">Correo electrónico</label>
-            <input type="email" id="correo" class="form-input" placeholder="Escriba su correo" pattern="[A-Za-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}">
-
-            <label for="mensaje" class="form-label">Mensaje</label>
-           <textarea id="mensaje" class="form-textarea" placeholder="Escribe aquí tu mensaje" pattern="[A-Za-z0-9]"></textarea>
-
-           <input type="submit" class="btn-submit" value="Enviar consulta">
-        </form>
-    </div>
-
+    <main class="l_body">
+        <nav class="menu" id="menu">
+            <a href="#" class="menu_imagen"><img src="../assets/image/Botanero_logo_2.svg" alt=""></a>
+            <ul class="menu_lista" id="menu_lista">
+                <li><a href="../index.html" class="menu_text">Volver</a></li>
+            </ul>
+        </nav>
+        <div class="l_body_contenedor">
+            <section class="l_body_form">
+                <form action="../php/f_login.php" method="POST" class="form">
+                    <div class="form-header">
+                        <h4 class="form-title">C<span>ontáctanos</span></h4>
+                    </div>
+                    <label for="nombre" class="form-label">Nombre<sup>*</sup></label>
+                    <input type="text" name="nombre" id="nombre" class="form-input" placeholder="Escriba su nombre" pattern="[A-Za-z]{0,40}" title="Solo letras minusculas y mayusculas" required maxlength="40" minlength="4">
+        
+                    <label for="contraseña" class="form-label">Contraseña <sup>*</sup></label>
+                    <input type="password" name="contraseña" id="contraseña" class="form-input" placeholder="Escriba su contraseña" pattern="[A-Za-z]{0,12}[0-9]{0-12}" title="Solo letras minusculas y mayusculas y numeros" required maxlength="12" minlength="6">
+        
+                   <input type="submit" name="submit" class="btn-submit" value="Entrar">
+                </form>
+            </section>
+            <section class="l_body_ayudas">
+                <span><a href="">Olvide mi contraseña</a></span>
+                <span><a href="">Registrarse</a></span>
+            </section>
+        </div>
+    </main>
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/modulos/materialize.js"></script>
+    <script src="../js/sin_modulos.js" nomodule></script>
 </body>
 </html>

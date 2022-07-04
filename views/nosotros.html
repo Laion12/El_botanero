@@ -1,20 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Nosotros</title>
-    <link rel="shortcut icon" href="assets/image/Botanero_favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="../assets/image/Botanero_favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <div class="n_contenedor">
-
+    <div class="u_contenedor">
+        <header class="n_head">
+            <nav class="menu menu2" id="menu">
+                <a href="login.html" class="menu_imagen"><img src="../assets/image/Botanero_logo_2.svg" alt=""></a>
+                <ul class="menu_lista menu_lista2" id="menu_lista">
+                    <li><a href="../index.html" class="menu_text">Inicio</a></li>
+                    <li><a href="catalogo.html" class="menu_text">Catálogo</a></li>
+                    <li><a href="#" class="menu_text">Nosotros</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="n_body">
+            <section class="n_body_ubicacion">
+                <div class="ubicacion_mapa">
+                    <p>Nos encontramos ubicados en:</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.247614602816!2d-97.9355165149806!3d19.31505865048691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cffc970b3d9509%3A0x8f70a65c94bf24f0!2sBlvd.%20Yancuitlalpan%2C%20Huamantla%2C%20Tlax.!5e0!3m2!1ses-419!2smx!4v1653987571716!5m2!1ses-419!2smx" width="600" height="450" style="border: 1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="ubicacion_descripcion">
+                    <p class="descripcion_title">Información:</p>
+                    <p class="descripcion_text">Nos encontramos ubicados en la siguiente dirección.
+                        En este local, podrá encontrar todos los productos que EL BOTANERO tiene para usted
+                    </p>
+                </div>
+            </section>
+            <section class="n_body_contacto">
+                <div class="contenedor">
+                    <form action="../php/f_contacto.php" method="POST" class="form">
+                        <div class="form-header">
+                            <h4 class="form-title">C<span>ontáctanos</span></h4>
+                        </div>
+                        <label for="nombre" class="form-label">Nombre(s) <sup>*</sup></label>
+                        <input type="text" name="nombre" id="nombre" class="form-input" placeholder="Escriba su nombre" pattern="[A-Za-z]{0,40}" title="Solo letras minusculas y mayusculas" required maxlength="40" minlength="4">
+            
+                        <label for="apellidos" class="form-label">Apellido(s) <sup>*</sup></label>
+                        <input type="text" name="apellido" id="apellido" class="form-input" placeholder="Escriba sus apellidos" pattern="[A-Za-z]{0,40}" title="Solo letras minusculas y mayusculas" required maxlength="40" minlength="6">
+            
+                        <label for="correo" class="form-label">Correo electrónico <sup>*</sup></label>
+                        <input type="email" name="correo" id="correo" class="form-input" placeholder="Escriba su correo" pattern="[A-Za-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}" required maxlength="30" minlength="12">
+            
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                       <textarea id="mensaje" name="mensaje" class="form-textarea" placeholder="Escribe aquí tu mensaje" pattern="[A-Za-z0-9]" maxlength="60" required></textarea>
+            
+                       <input type="submit" name="submit" class="btn-submit" value="Enviar consulta">
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="feet">
+            <div class="feet_row_datos">
+                <span class="feet_d">
+                    <img src="../assets/image/Botanero_logo.svg" alt="">
+                </span>
+                <span class="feet_d">
+                    <p>Horarios del local:</p>
+                </span>
+                <span class="feet_d">
+                    <p>Encuentranos en:</p>
+                    <p>Blvd. Yancuitlalpan Col, Nuevos Horizontes, Centro, 90500 Huamantla, Tlax.</p>
+                </span>
+                <span class="feet_d">
+                    <p>Siguenos en nuestras redes sociales:</p>
+                    <div>
+                        <a href="">
+                            <img src="../assets/image/fb_icon.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="../assets/image/instagram_icon.svg" alt="">
+                        </a>
+                    </div>
+                </span>
+            </div>
+            <hr>
+            <div class="feet_row_copy">
+                <span>&copy; 2022 Creado por Codelite</span>
+            </div>
+        </footer>
     </div>
-    <script src="js/main.js" type="module"></script>
-    <script src="js/modulos/materialize.js"></script>
-    <script src="js/sin_modulos.js" nomodule></script>
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/modulos/materialize.js"></script>
+    <script src="../js/sin_modulos.js" nomodule></script>
 </body>
 </html>

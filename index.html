@@ -15,18 +15,18 @@
         <img src="assets/image/Botanero_recortado.svg" alt="El botanero logo" class="cargador_img">
         <span class="cargador_carga"></span>
     </div>
-    <div class="i_contenedor" id="i_contenedor">
+    <div class="u_contenedor" id="i_contenedor">
         <header class="i_head">
             <nav class="menu" id="menu">
                 <a href="views/login.html" class="menu_imagen"><img src="assets/image/Botanero_logo_2.svg" alt=""></a>
                 <ul class="menu_lista" id="menu_lista">
                     <li><a href="#" class="menu_text">Inicio</a></li>
-                    <li><a href="#" class="menu_text">Catálogo</a></li>
-                    <li><a href="#" class="menu_text">Nosotros</a></li>
+                    <li><a href="views/catalogo.html" class="menu_text">Catálogo</a></li>
+                    <li><a href="views/nosotros.html" class="menu_text">Nosotros</a></li>
                 </ul>
             </nav>
             <div class="capa">
-                <h1 class="capa_titulo">El botanero</h1>
+                <h1 class="capa_titulo">EL BOTANERO</h1>
                 <h2 class="capa_subtitulo">El sabor por sobre todo</h2>
             </div>
         </header>
@@ -53,69 +53,81 @@
             </section>
             <section class="i_body_galeria">
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/bbq.webp" alt="">
+                    <img src="assets/image/fotos/bbq.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/bbq.webp" alt="">
+                    <img src="assets/image/fotos/chile_morita.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/bbq.webp" alt="">
+                    <img src="assets/image/fotos/chipotle.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/bbq.webp" alt="">
+                    <img src="assets/image/fotos/fuego.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/bbq.webp" alt="">
+                    <img src="assets/image/fotos/naturales.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/bbq.webp" alt="">
+                    <img src="assets/image/fotos/toreada.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/bbq.webp" alt="">
+                    <img src="assets/image/fotos/pizzerola.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/bbq.webp" alt="">
+                    <img src="assets/image/fotos/diablito.webp" alt="" loading="lazy">
                 </div>
             </section>
             <section class="i_body_contacto">
                 <div class="contenedor">
-                    <form action="" class="form">
+                    <form action="php/f_contacto.php" method="POST" class="form">
                         <div class="form-header">
-                            <h1 class="form-title">C<span>ontáctanos</span></h1>
+                            <h4 class="form-title">C<span>ontáctanos</span></h4>
                         </div>
+                        <label for="nombre" class="form-label">Nombre(s) <sup>*</sup></label>
+                        <input type="text" name="nombre" id="nombre" class="form-input" placeholder="Escriba su nombre" pattern="[A-Za-z]{0,40}" title="Solo letras minusculas y mayusculas" required maxlength="40" minlength="4">
             
-                        <label for="nombre" class="form-label">Nombre(s)</label>
-                        <input type="text" id="nombre" class="form-input" placeholder="Escriba su nombre" pattern="[A-Za-z]{3,254}">
+                        <label for="apellidos" class="form-label">Apellido(s) <sup>*</sup></label>
+                        <input type="text" name="apellido" id="apellido" class="form-input" placeholder="Escriba sus apellidos" pattern="[A-Za-z]{0,40}" title="Solo letras minusculas y mayusculas" required maxlength="40" minlength="6">
             
-                        <label for="apellidos" class="form-label">Apellidos</label>
-                        <input type="text" id="apellidos" class="form-input" placeholder="Escriba sus apellidos" pattern="[A-Za-z]{2,254}">
-            
-                        <label for="correo" class="form-label">Correo electrónico</label>
-                        <input type="email" id="correo" class="form-input" placeholder="Escriba su correo" pattern="[A-Za-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}">
+                        <label for="correo" class="form-label">Correo electrónico <sup>*</sup></label>
+                        <input type="email" name="correo" id="correo" class="form-input" placeholder="Escriba su correo" pattern="[A-Za-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}" required maxlength="30" minlength="12">
             
                         <label for="mensaje" class="form-label">Mensaje</label>
-                       <textarea id="mensaje" class="form-textarea" placeholder="Escribe aquí tu mensaje" pattern="[A-Za-z0-9]"></textarea>
+                       <textarea id="mensaje" name="mensaje" class="form-textarea" placeholder="Escribe aquí tu mensaje" pattern="[A-Za-z0-9]" maxlength="60" required></textarea>
             
-                       <input type="submit" class="btn-submit" value="Enviar consulta">
+                       <input type="submit" name="submit" class="btn-submit" value="Enviar consulta">
                     </form>
                 </div>
             </section>
         </main>
         <footer class="feet">
-            <span class="feet_d">
-                <img src="assets/image/Botanero_logo.svg" alt="">
-            </span>
-            <span class="feet_d">
-                <p>Horarios del local:</p>
-            </span>
-            <span class="feet_d">
-                <p>Encuentranos en:</p>
-                <p>Blvd. Yancuitlalpan Col, Nuevos Horizontes, Centro, 90500 Huamantla, Tlax.</p>
-            </span>
-            <span class="feet_d">
-                <p>Creado por:</p>
-                <p>Codelite</p>
-            </span>
+            <div class="feet_row_datos">
+                <span class="feet_d">
+                    <img src="assets/image/Botanero_logo.svg" alt="">
+                </span>
+                <span class="feet_d">
+                    <p>Horarios del local:</p>
+                </span>
+                <span class="feet_d">
+                    <p>Encuentranos en:</p>
+                    <p>Blvd. Yancuitlalpan Col, Nuevos Horizontes, Centro, 90500 Huamantla, Tlax.</p>
+                </span>
+                <span class="feet_d">
+                    <p>Visitanos en nuestras redes sociales:</p>
+                    <div>
+                        <a href="">
+                            <img src="assets/image/fb_icon.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="assets/image/instagram_icon.svg" alt="">
+                        </a>
+                    </div>
+                </span>
+            </div>
+            <hr>
+            <div class="feet_row_copy">
+                <span>&copy; 2022 Creado por Codelite</span>
+            </div>
         </footer>
     </div>
     <script src="js/main.js" type="module"></script>

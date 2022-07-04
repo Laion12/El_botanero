@@ -4,5 +4,5 @@ export function quitar_cargador(cargador){
         setTimeout(()=>{
             cargador.style.display="none";
         },800);
-    },6000);
+    },2000);
 }

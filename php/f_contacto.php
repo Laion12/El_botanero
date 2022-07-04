@@ -2,7 +2,7 @@
     include "conexion.php";
     if(isset($_POST['submit'])){
         $name =$_POST['nombre'];
-        $lastname =$_POST['apellido'];
+        $lastname =$_POST['apellidos'];
         $email =$_POST['correo'];
         $mesage =$_POST['mensaje'];
         $date = date('Y-m-d');

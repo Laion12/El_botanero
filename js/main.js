@@ -1,4 +1,4 @@
-import {quitar_cargador} from "./modulos/cargador.mjs";
+import {quitar_cargador} from "./modulos/cargador.js";
 // import buscar from "./modulos/buscador.mjs";
 
 const doc=document;

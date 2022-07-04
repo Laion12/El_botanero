@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de ususario</title>
+    <link rel="shortcut icon" href="../assets/image/Botanero_favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <main class="r_body">
+        <nav class="menu" id="menu">
+            <a href="#" class="menu_imagen"><img src="../assets/image/Botanero_logo_2.svg" alt=""></a>
+            <ul class="menu_lista" id="menu_lista">
+                <li><a href="login.html" class="menu_text">Atras</a></li>
+            </ul>
+        </nav>
+        <div class="r_body_contenedor">
+            <section class="r_body_form">
+                <form action="../php/f_registro.php" method="POST" class="form">
+                    <div class="form-header">
+                        <h4 class="form-title">R<span>egistro de usuario</span></h4>
+                    </div>
+                    <label for="nombre" class="form-label">Nombre(s) <sup>*</sup></label>
+                    <input type="text" name="nombre" id="nombre" class="form-input" placeholder="Escriba su nombre" pattern="[A-Za-z]{0,30}" title="Solo letras minusculas y mayusculas" required maxlength="30" minlength="4">
+        
+                    <label for="apellidos" class="form-label">Apellido(s) <sup>*</sup></label>
+                    <input type="text" name="apellidos" id="apellidos" class="form-input" placeholder="Escriba sus apellidos" pattern="[A-Za-z]{0,30}" title="Solo letras minusculas y mayusculas" required maxlength="30" minlength="6">
+        
+                    <label for="contrasena" class="form-label">Contraseña <sup>*</sup></label>
+                    <input type="password" name="contrasena" id="contrasena" class="form-input" placeholder="Escriba su contraseña" pattern="[A-Za-z0-9]{0,14}" title="Solo letras minusculas, mayusculas y numeros" required maxlength="14" minlength="6">
+                    
+                    <label for="correo" class="form-label">Correo electrónico <sup>*</sup></label>
+                    <input type="email" name="correo" id="correo" class="form-input" placeholder="Escriba su correo" pattern="[A-Za-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}" required maxlength="30" minlength="12">
+        
+                   <input type="submit" name="submit" class="btn-submit" value="Registrar">
+                </form>
+            </section>
+        </div>
+    </main>
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/modulos/materialize.js"></script>
+    <script src="../js/sin_modulos.js" nomodule></script>
+</body>
+</html>

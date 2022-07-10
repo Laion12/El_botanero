@@ -1,5 +1,5 @@
 <?php
-    include '../conexion.php';
+    include "../conexion.php";
 ?>
 <html lang="en">
 <head>
@@ -43,6 +43,9 @@ foreach($results as $result){?>
   <td><?php echo $result -> nombre?></td>
   <td><?php echo $result -> descripcion?></td>
   <td><?php echo $result -> id_admin?></td>
+
+  <td><a href="<?php echo "../editar.php" .$result->id?>">Editar</a></td>
+  <td><a href="<?php echo "../eliminar.php" .$result->id?>">Eliminar</a></td>
   </tr>
   
 <?php } ?>

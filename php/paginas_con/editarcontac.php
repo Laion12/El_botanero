@@ -56,10 +56,10 @@
         <div class="cons_body_contenedor">
         <center>
         <form method="post">
-            Nombre: <input required type="text" name="nombre" placeholder="Nombre" value="<?php echo $data['nombre'] ?>"/> <br><br>
-            Apellido: <input required type="text" name="apellido" placeholder="Apellido" value="<?php echo $data['apellido'] ?>"/> <br><br>
-            Correo: <input required type="text" name="correo" placeholder="Correo" value="<?php echo $data['correo'] ?>"/> <br><br>
-            Mensaje: <input required type="text" name="mensaje" placeholder="Mensaje" value="<?php echo $data['mensaje'] ?>"/> <br><br>
+            Nombre: <input required type="text" name="nombre" placeholder="Nombre" value="<?php echo $data['nombre'] ?>"/> <br>
+            Apellido: <input required type="text" name="apellido" placeholder="Apellido" value="<?php echo $data['apellido'] ?>"/> 
+            Correo: <input required type="text" name="correo" placeholder="Correo" value="<?php echo $data['correo'] ?>"/>
+            Mensaje: <input required type="text" name="mensaje" placeholder="Mensaje" value="<?php echo $data['mensaje'] ?>"/> 
             <input type="submit" name="submit" />
         </form>
         </center>

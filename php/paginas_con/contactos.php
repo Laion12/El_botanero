@@ -43,6 +43,8 @@ foreach($results as $result){?>
   <td><?php echo $result -> apellido?></td>
   <td><?php echo $result -> correo?></td>
   <td><?php echo $result -> mensaje?></td>
+  <td><a href="<?php echo "editarcontac.php" .$result->id?>"><img src="../assets/image/fotos/iconoeditar.png" width="40" height="40"></a></td>
+  <td><a href="<?php echo "eliminarcontac.php" .$result->id?>"><img src="../assets/image/fotos/iconoeliminar.png" width="40" height="40"></a></td>
   </tr>
   
 <?php } ?>

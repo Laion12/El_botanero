@@ -44,8 +44,8 @@ foreach($results as $result){?>
   <td><?php echo $result -> descripcion?></td>
   <td><?php echo $result -> id_admin?></td>
 
-  <td><a href="<?php echo "../editar.php" .$result->id?>"><img src="../assets/image/fotos/iconoeditar.png" width="40" height="40"></a></td>
-  <td><a href="<?php echo "../eliminar.php" .$result->id?>"><img src="../assets/image/fotos/iconoeliminar.png" width="40" height="40"></a></td>
+  <td><a href="<?php echo "../editar.php" .$result->id?>"><img src="../../assets/image/fotos/iconoeditar.png" width="40" height="40"></a></td>
+  <td><a href="<?php echo "../eliminar.php" .$result->id?>"><img src="../../assets/image/fotos/iconoeliminar.png" width="40" height="40"></a></td>
   </tr>
   
 <?php } ?>

@@ -1,11 +1,11 @@
 import {quitar_cargador} from "./modulos/cargador.js";
-import buscar from "./modulos/buscador.js";
+//import buscar from "./modulos/buscador.js";
 
 const doc=document;
  doc.addEventListener("DOMContentLoaded",(e)=>{
     var prueba=doc.getElementsByClassName("catalogo_item");
     console.log(prueba);
-    buscar(".buscador","catalogo_item");
+    //buscar(".buscador","catalogo_item");
 
  });
 const cargador1=doc.querySelector(".cargador_contenedor");

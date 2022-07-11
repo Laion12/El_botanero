@@ -14,7 +14,9 @@
 <body>
     <main class="cons_body">
         <nav class="menu" id="menu">
-            <a href="#" class="menu_imagen"><img src="../../assets/image/Botanero_logo_2.svg" alt=""></a>
+            <div class="menu_imagen">
+                <a href="#"><img src="../../assets/image/Botanero_logo_2.svg" alt=""></a>
+            </div>
             <ul class="menu_lista" id="menu_lista">
                 <li><a href="../../views/consultas.html" class="menu_text">Atras</a></li>
             </ul>

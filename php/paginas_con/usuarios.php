@@ -18,7 +18,7 @@
               <a href="#"><img src="../../assets/image/Botanero_logo_2.svg" alt=""></a>
             </div>
             <ul class="menu_lista" id="menu_lista">
-                <li><a href="../../views/consultas.html" class="menu_text">Atras</a></li>
+                <li><a href="../../views/consultas.html" class="menu_text">Atrás</a></li>
             </ul>
         </nav>
         <div class="cons_body_contenedor">
@@ -45,6 +45,8 @@ foreach($results as $result){?>
   <td><?php echo $result -> apellido?></td>
   <td><?php echo $result -> contraseña?></td>
   <td><?php echo $result -> correo?></td>
+  <td><a href="<?php echo "editarusu.php?id=" .$result->id?>"><img src="../../assets/image/fotos/iconoeditar.png" width="40" height="40"></a></td>
+  <td><a href="<?php echo "eliminarusu.php?id=" .$result->id?>"><img src="../../assets/image/fotos/iconoeliminar.png" width="40" height="40"></a></td>
   </tr>
   
 <?php } ?>

@@ -19,6 +19,7 @@
             </div>
             <ul class="menu_lista" id="menu_lista">
                 <li><a href="../../views/consultas.html" class="menu_text">Atrás</a></li>
+                
             </ul>
         </nav>
         <div class="cons_body_contenedor">

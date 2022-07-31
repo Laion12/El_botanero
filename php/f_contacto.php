@@ -2,7 +2,7 @@
     include "conexion.php";
     if(isset($_POST['submit'])){
         $name =$_POST['nombre'];
-        $lastname =$_POST['apellidos'];
+        $lastname =$_POST['apellido'];
         $email =$_POST['correo'];
         $mesage =$_POST['mensaje'];
         $date = date('Y-m-d');
@@ -17,4 +17,19 @@
     }else{
         echo "Error al cachar los mensajes";
     }
+
+
+
+    $ip =$_SERVER['REMOTE_ADDR'];
+    $captcha =$_POST['g-recaptcha-response'];
+    $secretkey ="6LfvdTUhAAAAAGPim8AWqljGYcGdzvAX_haDy_ZF";
+
+    $respuesta =file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
+
+    $atributos =json_decode($respuesta, TRUE);
+
+    if($atributos['success']){
+        echo 'Verificar captcha';
+    }
+
 ?>

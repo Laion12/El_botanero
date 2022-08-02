@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="keywords" content="papas">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="cargador_contenedor">
@@ -96,6 +97,8 @@
             
                         <label for="mensaje" class="form-label">Mensaje</label>
                        <textarea id="mensaje" name="mensaje" class="form-textarea" placeholder="Escribe aquí tu mensaje" pattern="[A-Za-z0-9]" maxlength="60" required></textarea>
+
+                       <div class="g-recaptcha" data-sitekey="6LfvdTUhAAAAABViBLl7_Qg0Y7kotlEAihR7Ela7"></div>
             
                        <input type="submit" name="submit" class="btn-submit" value="Enviar consulta">
                     </form>

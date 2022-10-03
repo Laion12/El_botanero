@@ -5,26 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El botanero</title>
-    <link rel="shortcut icon" href="assets/image/Botanero_favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="./assets/image/logo/Botanero_favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="keywords" content="papas">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="cargador_contenedor">
-        <img src="assets/image/Botanero_recortado.svg" alt="El botanero logo" class="cargador_img">
+        <img src="./assets/image/logo/Botanero_recortado.svg" alt="El botanero logo" class="cargador_img">
         <span class="cargador_carga"></span>
     </div>
     <div class="u_contenedor" id="i_contenedor">
         <header class="i_head">
             <nav class="menu" id="menu">
                 <div class="menu_imagen">
-                    <a href="views/login.html"><img src="assets/image/Botanero_logo_2.svg" alt=""></a>
+                    <a href="./views/login.html"><img src="./assets/image/logo/Botanero_logo_2.svg" alt=""></a>
                 </div>
                 <ul class="menu_lista" id="menu_lista">
                     <li><a href="#" class="menu_text">Inicio</a></li>
-                    <li><a href="views/catalogo.html" class="menu_text">Catálogo</a></li>
-                    <li><a href="views/nosotros.html" class="menu_text">Nosotros</a></li>
+                    <li><a href="./views/catalogo.html" class="menu_text">Catálogo</a></li>
+                    <li><a href="./views/nosotros.html" class="menu_text">Nosotros</a></li>
                 </ul>
             </nav>
             <div class="capa">
@@ -54,34 +55,35 @@
                 </div>
             </section>
             <section class="i_body_galeria">
+                <h4>Conoce las papas mas famosas de nuestro negocio</h4>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/bbq.webp" alt="" loading="lazy">
+                    <img src="./assets/image/fotos/bbq.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/chile_morita.webp" alt="" loading="lazy">
+                    <img src="./assets/image/fotos/chile_morita.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/chipotle.webp" alt="" loading="lazy">
+                    <img src="./assets/image/fotos/chipotle.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/fuego.webp" alt="" loading="lazy">
+                    <img src="./assets/image/fotos/fuego.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/naturales.webp" alt="" loading="lazy">
+                    <img src="./assets/image/fotos/naturales.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/toreada.webp" alt="" loading="lazy">
+                    <img src="./assets/image/fotos/toreada.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/pizzerola.webp" alt="" loading="lazy">
+                    <img src="./assets/image/fotos/pizzerola.webp" alt="" loading="lazy">
                 </div>
                 <div class="galeria_contenedor">
-                    <img src="assets/image/fotos/diablito.webp" alt="" loading="lazy">
+                    <img src="./assets/image/fotos/diablito.webp" alt="" loading="lazy">
                 </div>
             </section>
             <section class="i_body_contacto">
                 <div class="contenedor">
-                    <form action="php/f_contacto.php" method="POST" class="form">
+                    <form action="./php/formularios/f_contacto.php" method="POST" class="form_data form">
                         <div class="form-header">
                             <h4 class="form-title">C<span>ontáctanos</span></h4>
                         </div>
@@ -96,8 +98,8 @@
             
                         <label for="mensaje" class="form-label">Mensaje</label>
                        <textarea id="mensaje" name="mensaje" class="form-textarea" placeholder="Escribe aquí tu mensaje" pattern="[A-Za-z0-9]" maxlength="60" required></textarea>
-            
                        <input type="submit" name="submit" class="btn-submit" value="Enviar consulta">
+                       <input type="reset" value="Vaciar formulario">
                     </form>
                 </div>
             </section>
@@ -105,23 +107,20 @@
         <footer class="feet">
             <div class="feet_row_datos">
                 <span class="feet_d">
-                    <img src="assets/image/Botanero_logo.svg" alt="">
+                    <img src="./assets/image/logo/Botanero_logo.svg" alt="" lazy="loading">
                 </span>
                 <span class="feet_d">
                     <p>Horarios del local:</p>
                 </span>
                 <span class="feet_d">
                     <p>Encuentranos en:</p>
-                    <p>Blvd. Yancuitlalpan Col, Nuevos Horizontes, Centro, 90500 Huamantla, Tlax.</p>
+                    <p>Blvd. Yancuitlalpan, Centro, 90500 Huamantla, Tlax.</p>
                 </span>
                 <span class="feet_d">
                     <p>Visitanos en nuestras redes sociales:</p>
                     <div>
-                        <a href="">
-                            <img src="assets/image/fb_icon.svg" alt="">
-                        </a>
                         <a href="https://www.instagram.com/el_botanero_huam/">
-                            <img src="assets/image/instagram_icon.svg" alt="">
+                            <img src="./assets/image/iconos/instagram_icon.svg" alt="">
                         </a>
                     </div>
                 </span>
@@ -129,11 +128,12 @@
             <hr>
             <div class="feet_row_copy">
                 <span>&copy; 2022 Creado por Codelite</span>
+                <span><a class="btn" href="./views/politca_p.html" target="_blank">AVISO DE PRIVACIDAD</a></span>
             </div>
         </footer>
     </div>
-    <script src="js/main.js" type="module"></script>
-    <script src="js/modulos/materialize.js"></script>
-    <script src="js/sin_modulos.js" nomodule></script>
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/modulos/materialize.js"></script>
+    <script src="./js/sin_modulos.js" nomodule></script>
 </body>
 </html>

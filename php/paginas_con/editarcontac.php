@@ -1,35 +1,47 @@
 <?php
-    include '../conexion.php';
+    require_once '../main.php';
+    if(!isset($_SESSION['id_u']) || $_SESSION['id_u']=="" || !isset($_SESSION['nombre_u']) || $_SESSION['nombre_u']==""){
+        if(headers_sent()){
+            echo "<script> window.location.href='../../views/login.html'</script>";
+            exit();
+        }else{
+            header("location: ../../views/login.html");
+            exit();
+        }
+    }else{ 
     if(!isset($_GET['id'])){
         die("Error: id de usuario no existe");
     }
-    $query = $dbh->prepare("SELECT * FROM `contacto` WHERE id = :id");
-    $query->bindParam(":id", $_GET['id']);
-    $query->execute();
-
-    if($query->rowCount() == 0){
-     
+    $save =conectar();
+    $save=$save->prepare("SELECT * FROM `contacto` WHERE id = :id");
+    $marcador=[
+        ":id"=>$_GET['id']
+    ];
+    $save->execute($marcador);
+    if($save->rowCount() == 0){
         die("Error: al encontrar id");
     }else{
-       
-        $data = $query->fetch();
+        $data = $save->fetch();
     }
-
-    if(isset($_POST['submit'])){
-    
-        $name =$_POST['nombre'];
-        $lastname =$_POST['apellidos'];
+    $save=null;
+    if(isset($_POST['submit'])){    
+        $name =limpiar($_POST['nombre']);
+        $lastname =limpiar($_POST['apellido']);
         $email =$_POST['correo'];
-        $mesage =$_POST['mensaje'];
+        $mesage =limpiar($_POST['mensaje']);
         $date = date('Y-m-d');
-        $query = $dbh->prepare("UPDATE `contacto` SET `nombre`=:nombre,`apellido`=:apellido,`correo`=:correo,`mensaje`=:mensaje,`correo`=:correo WHERE id=:id");
-        $query->bindParam(":nombre", $name,PDO::PARAM_STR,25);
-        $query->bindParam(":apellido", $lastname,PDO::PARAM_STR,25);
-        $query->bindParam(":correo", $email,PDO::PARAM_STR,25);
-        $query->bindParam(":mensaje", $mesage,PDO::PARAM_STR,25);
-        $query->bindParam(":id", $_GET['id']);
-        $query-> execute();
-        header("location: contactos.php");
+        $save =conectar();
+        $save=$save->prepare("UPDATE `contacto` SET `nombre`=:nombre,`apellido`=:apellido,`correo`=:correo,`mensaje`=:mensaje,`correo`=:correo WHERE id=:id");
+        $marcador=[
+            ":nombre"=>$name,
+            ":apellido"=>$lastname,
+            ":correo"=>$email,
+            ":mensaje"=>$mesage,
+            ":id"=>$_GET['id']
+        ];
+        $save->execute($marcador);
+        $save=null;
+        header("location: ../vistas/contactos.php");
     }
 ?>
 
@@ -39,7 +51,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../assets/image/Botanero_favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/image/logo/Botanero_favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="../../css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>Editar datos</title>
@@ -48,9 +60,9 @@
     <body>
     <main class="cons_body">
         <nav class="menu" id="menu">
-            <a href="#" class="menu_imagen"><img src="../../assets/image/Botanero_logo_2.svg" alt=""></a>
+            <a href="#" class="menu_imagen"><img src="../../assets/image/logo/Botanero_logo_2.svg" alt=""></a>
             <ul class="menu_lista" id="menu_lista">
-                <li><a href="contactos.php" class="menu_text">Atrás</a></li>
+                <li><a href="../vistas/contactos.php" class="menu_text">Atrás</a></li>
             </ul>
         </nav>
         <div class="cons_body_contenedor">
@@ -68,3 +80,6 @@
     <script src="../../js/sin_modulos.js" nomodule></script>
     </body>
 </html>
+<?php
+    }
+?>

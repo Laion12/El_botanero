@@ -3,7 +3,7 @@
     width: 100%;
     height: 100vh;
     border-radius: 0% 0% 2% 2%;
-    background-image: url(../../assets/image/fotos/diablito.webp);
+    background-image: url(./../../assets/image/fotos/diablito.webp);
     background-repeat: no-repeat;
     background-size: cover;
     transition: animation .2s linear;
@@ -33,7 +33,7 @@
 }
 .i_body{
     width: 100%;
-    height: 360vh;
+    height: 330vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -50,8 +50,8 @@
     grid-column: 1/2;
     grid-row: 1/2;
     border-radius: 2%;
-    margin: 2%;
-    background-image: url(../../assets/image/fotos/fuego.webp);
+    margin-left: 2%;
+    background-image: url(./../../assets/image/fotos/fuego.webp);
     background-repeat: no-repeat;
     background-size:50% 100%;
     background-attachment: fixed;
@@ -87,12 +87,13 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    
 }
 .galeria_contenedor{
     display: inline-block;
     width: 20%;
-    height: 42%;
-    margin: 2%;
+    height: 40%;
+    margin: 1% 2%;
     border-radius: 2%;
     transition: transform 1s;
     overflow: hidden;
@@ -113,28 +114,52 @@
 .i_body_contacto{
     grid-column: 1/2;
     grid-row: 3/4;
-    background:url(../../assets/image/fotos/jalapeño.webp);
+    background:url(./../../assets/image/fotos/jalapeño.webp);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 @keyframes fondo{
     0%{
-        background-image:  url(../../assets/image/fotos/diablito.webp);
+        background-image:  url(./../../assets/image/fotos/diablito.webp);
     }
     10%{
-        background-image: url(../../assets/image/fotos/takis.webp);
+        background-image: url(./../../assets/image/fotos/takis.webp);
     }
     35%{
-        background-image: url(../../assets/image/fotos/bbq.webp);
+        background-image: url(./../../assets/image/fotos/bbq.webp);
     }
     60%{
-        background-image: url(../../assets/image/fotos/queso_con_jalapeño.webp);
+        background-image: url(./../../assets/image/fotos/queso_con_jalapeño.webp);
     }
     85%{
-        background-image: url(../../assets/image/fotos/chipotle.webp);
+        background-image: url(./../../assets/image/fotos/chipotle.webp);
     }
     100%{
-        background-image:  url(../../assets/image/fotos/diablito.webp);
+        background-image: url(./../../assets/image/fotos/diablito.webp);
+    }
+}
+/* media para dispositivos grandes del grid */
+@media (min-width:1400px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 1fr;
+        gap: 8px;
+    }
+}
+/* media para dispositivos tablets del grid */
+@media (min-width:601px) and (max-width:990px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 6vh 1fr;
+        gap: 4px;
+    }
+}
+/* media para dispositivos moviles del grid */
+@media (max-width:600px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 6vh 1fr;
+        gap: 2px;
     }
 }

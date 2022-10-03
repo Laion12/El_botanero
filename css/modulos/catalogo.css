@@ -5,10 +5,11 @@
 }
 .c_body{
     width: 100%;
+    min-height:50vh;
 }
 .c_body_buscador{
     width: 100%;
-    height: 14vh;
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,15 +17,19 @@
 .buscador{
     width: 48% !important;
 }
+.buscador::placeholder{
+    color: var(--color_g);
+}
 .c_body_catalogo{
     width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .catalogo_item{
     width: 20%;
-    height: 300px;
+    height: 320px;
     margin: 2% 2%;
     border-radius: 6px;
     padding: 0px;
@@ -36,14 +41,14 @@
     align-items: center;
 }
 .catalogo_item img{
-    width: 80%;
+    width: 82%;
     height: 68%;
     border-radius: 4px;
 }
 .catalogo_item h4{
-    font-size: 1.4em;
+    font-size: 1em;
     margin: 0px;
-    font-weight: 400;
+    font-weight: 500;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .catalogo_item button{
@@ -54,6 +59,7 @@
     background-color: var(--color_a);
     cursor: pointer;
     color: #fff;
+    font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
@@ -69,13 +75,4 @@
 .filtro{
     display: none;
 }
-/* .catalogo_item button span{
-    color: #fff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: color 1s;
-} */
-/* .catalogo_item button span:hover{
-    color: #000;
-} */
+
